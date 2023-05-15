@@ -5,3 +5,15 @@ body{
     align-items: center;
     background-color: #f5f5f5;
 }
+
+.music-wave-animation{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.music-wave-animation-item{
+    background: red;
+    height: 20px;
+    width: 30px;
+}
