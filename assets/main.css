@@ -1,19 +1,51 @@
-body{
+body {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f5f5f5;
+    background: #030513;
+    overflow: hidden;
 }
 
-.music-wave-animation{
+.music-wave-animation {
     display: flex;
     align-items: center;
+    gap: 0.3rem;
     position: relative;
 }
 
-.music-wave-animation-item{
-    background: red;
-    height: 20px;
-    width: 30px;
+.music-wave-animation-item {
+    background: #FF1700;
+    height: 10px;
+    width: 6px;
+    border-radius: 10px;
+    animation: musicWaveMovement infinite 1.5s ease-in-out;
+    animation-delay: 1s;
+    opacity: 0;
+
+}
+
+.music-wave-animation-item:nth-child(2n){
+    animation-delay: .8s !important;
+    background: #FF8E00;
+}
+
+.music-wave-animation-item:nth-child(3n){
+    animation-delay: .6s !important;
+    background: #FFE400;
+}
+
+.music-wave-animation-item:nth-child(4n){
+    animation-delay: .4s !important;
+    background: #06FF00;
+}
+
+@keyframes musicWaveMovement {
+    0%, 100%{
+        transform: scale(0);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.25);
+    }
 }
